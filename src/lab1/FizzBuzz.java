@@ -8,14 +8,15 @@ class FizzBuzz {
     public static void main(String[] args) {
 
 
-        for (int i = 1; i <= 100; i++) {
-//        while (int i = 1; boolean b = i <= 100;) {
+//        for (int i = 1; i <= 100; i++) {
+        int i = 1;
+        while (i <= 100) {
 
-            extracted(i);
+            i = getI(i);
         }
     }
 
-    private static void extracted(int i) {
+    private static int getI(int i) {
         // Find out which numbers divide i.
         boolean divisibleBy3 = i % 3 == 0;
         boolean divisibleBy5 = i % 5 == 0;
@@ -38,5 +39,7 @@ class FizzBuzz {
             System.out.println(i);
 
         }
+        i++;
+        return i;
     }
 }
